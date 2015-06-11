@@ -17,7 +17,7 @@ EmberApp.PAYMENT_METHODS = [
     logo:
       alt: "Paypal"
       height: "25"
-      src: "https://asset1.bp42.com/assets/logos/paypal-e03cacbf6e41c26fb2d544299edf31e1.png"
+      src: "/assets/paypal.png"
       width:"100"
   }
   {
@@ -26,7 +26,7 @@ EmberApp.PAYMENT_METHODS = [
     logo:
       alt: "Giropay"
       height: 35
-      src: "https://asset1.bp42.com/assets/logos/giropay-d93ef717321f0326181287545d389d98.png",
+      src: "/assets/giropay.png",
       width: 81
   }
 ]
