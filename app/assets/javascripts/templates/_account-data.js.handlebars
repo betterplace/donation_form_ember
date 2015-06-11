@@ -1,0 +1,19 @@
+{{#if hasAccountData}}
+  <h4>Zahlungsdaten:</h4>
+  <fieldset>
+    {{#if eft}}
+      <div class="form-group account-number">
+        {{input value=payment.accountNumber class="form-control" placeholder="IBAN / Kontonummer" }}
+      </div>
+      <div class="form-group bank-code">
+        {{input value=payment.bankCode      class="form-control" placeholder="BIC / BLZ" }}
+      </div>
+      <div class="bank-name">{{bankName}}</div>
+    {{/if}}
+    {{#if giropay}}
+      <div class="form-group bank-code">
+        {{input value=payment.giropayBankCode class="form-control" placeholder="BLZ" }}
+      </div>
+    {{/if}}
+  </fieldset>
+{{/if}}

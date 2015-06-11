@@ -1,0 +1,25 @@
+<div class="form-group">
+  <label class="checkbox">
+    <input name="terms_of_use" type="checkbox" value="1">
+    {{#if paymentMethod.needsPermission}}
+      <span>
+        Ich berechtige betterplace.org, diese Spende von meinem Konto einzuziehen (<a
+          href="#" class="larger-click-area" data-preview-url="https://www.bp42.com/de/sepa_mandate_preview" target="_blank">SEPA-Mandat</a>).
+      </span>
+    {{/if}}
+
+    <span>
+      Ich habe die
+      <a href="https://www.betterplace.org/c/nutzungsbedingungen/"
+         class="larger-click-area"
+         target="_blank">Nutzungsbedingungen</a>
+      und
+      <a href="https://www.betterplace.org/c/datenschutz/"
+         class="larger-click-area"
+         target="_blank">Datenschutzregelungen</a>
+      von betterplace.org gelesen und akzeptiert.
+    </span>
+  </label>
+</div>
+
+

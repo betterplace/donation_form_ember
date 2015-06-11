@@ -1,0 +1,58 @@
+@import "twitter/bootstrap/bootstrap";
+
+// Set the correct sprite paths
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: font-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: font-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: font-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: font-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: font-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/glyphicons.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @link-color: #ff0000;
+
+.main-content-row {           .make-row();
+  .main-content-col {         .make-md-column(8); .make-md-column-offset(2);
+    header {                  .make-row();
+      .betterplace-logo {     .make-md-column(5); .make-md-column-offset(8) }
+      .project-name {         .make-md-column(7); }
+    }
+    .donation-amount-row {    .make-row();
+      .amounts-col {          .make-md-column(8); }
+      .codonation-col {       .make-md-column(3); .make-md-column-offset(1); }
+    }
+    .payment-row {            .make-row();
+      .payment-data-col {     .make-md-column(8);
+        fieldset {            .make-row();
+          .first-name {       .make-md-column(6); }
+          .last-name {        .make-md-column(6); }
+          .email, .street {   .make-md-column(12); }
+          .zip {              .make-md-column(3); }
+          .city {             .make-md-column(5); }
+          .country {          .make-md-column(4); }
+          .account-number {   .make-md-column(6); }
+          .bank-code {        .make-md-column(6); }
+          .bank-name {        .make-md-column(6); .make-md-column-offset(6); }
+        }
+      }
+      .payment-security-col { .make-md-column(4); }
+    }
+  }
+}

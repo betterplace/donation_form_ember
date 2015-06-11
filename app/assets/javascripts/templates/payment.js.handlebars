@@ -1,0 +1,20 @@
+<ul class="nav nav-pills nav-stacked" style="position: absolute; left: -110px;">
+  {{bs-tab payment=model paymentMethod='eft'     label='Bankeinzug'}}
+  {{bs-tab payment=model paymentMethod='wcp'     label='Kreditkarte'}}
+  {{bs-tab payment=model paymentMethod='paypal'  label='PayPal'}}
+  {{bs-tab payment=model paymentMethod='giropay' label='Giropay'}}
+</ul>
+
+<div class="payment-row">
+  <div class="payment-data-col">
+    {{partial 'sender-data'   payment=model }}
+    {{partial 'account-data'  payment=model }}
+    {{partial 'terms-of-use'  paymentMethod=paymentMethod }}
+    {{partial 'provider-logo' paymentMethod=paymentMethod }}
+  </div>
+
+  <div class="payment-security-col">
+    {{partial 'security-info' }}
+  </div>
+</div>
+

@@ -1,0 +1,36 @@
+<h2>Deine Spende</h2>
+
+<div class="donation-amount-row">
+  <div class="amounts-col">
+    <div class="form-group">
+      <label>Projektspende</label>
+      <div class="input-group">
+        {{input value=model.amount class="form-control" pattern="[1-9][0-9]*" size="8" type="text" maxlength="8"}}
+        <span class="input-group-addon">€</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Gesamtspende</label>
+      <div class="input-group">
+        {{input value=totalAmount class="form-control" disabled="disabled" }}
+        <span class="input-group-addon">€</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group codonation-col">
+    <label>Fördere betterplace.org</label>
+    {{view "select"
+      content=codonationFactors
+      value=selectedCodonationFactor
+      optionValuePath="content.val"
+      optionLabelPath="content.label"
+      class="form-control"}}
+  </div>
+</div>
+
+{{outlet}}
+
+<button class="btn btn-primary btn-large" >
+  Jetzt {{totalAmount}} spenden!
+</button>

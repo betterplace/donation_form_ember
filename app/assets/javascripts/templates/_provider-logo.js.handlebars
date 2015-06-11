@@ -1,0 +1,9 @@
+<p class="redirection-hint">{{paymentMethod.redirectionHint}}</p>
+
+{{#if paymentMethod.logo}}
+  <p><img {{bind-attr
+            alt=paymentMethod.logo.alt
+            height=paymentMethod.logo.height
+            src=paymentMethod.logo.src
+            width=paymentMethod.logo.width }} ></p>
+{{/if}}
