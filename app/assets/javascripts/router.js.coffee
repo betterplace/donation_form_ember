@@ -3,6 +3,6 @@
 EmberApp.Router.map ()->
 #  @resource('posts')
 #  @resource 'donation', {path: '/:paymentMethod'}
-  @resource 'donation', {path: '/'}, ->
-    @resource 'payment', {path: '/:paymentMethod'}
+  @resource 'donation', { path: '/' }, ->
+    @resource 'payment', { path: '/:paymentMethod' }
 
